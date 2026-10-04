@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Interactive Quiz Game</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="quiz-container">
+
+        <!-- START SCREEN -->
+
+        <div id="startScreen">
+
+            <h1>🧠 Quiz Challenge</h1>
+
+            <p>
+                Test your knowledge with different types of questions!
+            </p>
+
+            <button onclick="startQuiz()" class="start-btn">
+                Start Quiz
+            </button>
+
+        </div>
+
+
+        <!-- QUIZ SCREEN -->
+
+        <div id="quizScreen" class="hidden">
+
+            <div class="quiz-header">
+
+                <span id="questionNumber">
+                    Question 1 of 5
+                </span>
+
+                <span id="scoreDisplay">
+                    Score: 0
+                </span>
+
+            </div>
+
+
+            <!-- PROGRESS BAR -->
+
+            <div class="progress-container">
+
+                <div
+                    id="progressBar"
+                    class="progress-bar">
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION -->
+
+            <h2 id="question">
+                Question goes here
+            </h2>
+
+
+            <!-- ANSWERS -->
+
+            <div id="answers"></div>
+
+
+            <!-- FEEDBACK -->
+
+            <p id="feedback"></p>
+
+
+            <!-- NAVIGATION -->
+
+            <div class="navigation">
+
+                <button
+                    id="prevBtn"
+                    onclick="previousQuestion()">
+                    ← Previous
+                </button>
+
+                <button
+                    id="nextBtn"
+                    onclick="nextQuestion()">
+                    Next →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESULT SCREEN -->
+
+        <div id="resultScreen" class="hidden">
+
+            <h1>🎉 Quiz Completed!</h1>
+
+            <p class="result-text">
+                Your final score is:
+            </p>
+
+            <div id="finalScore">
+                0 / 0
+            </div>
+
+            <p id="resultMessage"></p>
+
+            <button
+                onclick="restartQuiz()"
+                class="start-btn">
+                🔄 Play Again
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
